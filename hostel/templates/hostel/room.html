@@ -1,0 +1,46 @@
+{% extends 'hostel/base.html' %}
+
+{% block body %}
+<div class="container">
+	<form method="post" style="margin-top: 20px;"> 
+		{% csrf_token %}
+		<div class="col-md-2 col-md-offset-4">
+			{{frm.as_p}} 
+		<button type="submit" class="btn back" style="margin-top: 10px;">Submit</button>	
+		</div>	
+	</form>
+</div>
+{% endblock %}
+
+
+<!-- <div class="col-md-4">
+		<div class="col-md-4">
+			<label for="type">Type</label>
+			<select name="type" class="form-control">
+				<option value="admin"></option>
+				<option value="student"></option>
+			</select>
+		</div>
+		<div>
+			<label for="num">Hostel-Name</label>
+			<input type="text" name="hname" class="form-control">
+		</div>
+		<div class="col-md-4">
+			<label for="num">Room-No</label>
+			<input type="text" name="room_no" class="form-control">
+		</div>
+		<div class="col-md-4">
+			<label for="num">Block</label>
+			<input type="text" name="block" class="form-control">
+		</div>
+		<div class="col-md-4">
+			<label for="num">Floor</label>
+			<input type="text" name="floor" class="form-control">
+		</div>
+		<div class="col-md-4" >
+			<label for="num">Bed-No.</label>
+			<input type="text" name="bed_no" class="form-control">
+		</div><br><br>
+		<div  align="center" style="margin: 120px;">
+			<button type="submit" class="btn btn-info">Submit</button>
+		</div> -->

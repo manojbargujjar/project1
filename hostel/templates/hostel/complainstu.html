@@ -1,0 +1,33 @@
+{% extends 'hostel/basestu.html' %}
+{% block body %}
+<div class="container">
+	<form method="post">
+		{% csrf_token %}
+		<div class="col-md-4">
+			<label for="room">Room-No.</label>
+			<input type="text" name="rno" class="form-control">
+		</div>
+		<div class="col-md-4">
+			<label for="complain">Compalint</label>
+			<textarea class="form-control" rows="5" cols="30" name="complain"></textarea>
+		</div>
+		<div class="col-md-4">
+			<label for="date">Date</label>
+			<input type="date" name="date" class="form-control">
+			
+		</div><br>
+			<div>
+				<button type="submit" class="btn back" style="margin: 40px; margin-left: 270px;">Submit</button>
+			</div>		
+	</form>
+	
+</div>
+{% endblock %}
+
+<!--
+	<div class="col-md-2 col-md-offset-4">
+			{{frm.as_table}}
+			
+			<button type="submit" class="btn btn-info" style="margin-top: 20px;">Submit</button>	
+		</div>
+	-->

@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+<style type="text/css">
+	
+	.back{
+		background-color: lightgreen;
+	}
+
+</style>
+
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class=" well back">
+		<h2 align="center">Hostel Allotment</h2>
+		</div>
+		<div>
+		<form method="post">
+			{% csrf_token %}
+			<div class="row" >
+				<div class="col-md-3">
+					<label for="username">Username</label>
+					<input type="text" name="username" class="form-control">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-3">
+					<label for="password">Password</label>
+					<input type="password" name="password" class="form-control">
+				</div>
+			</div><br>
+			
+			<div>
+				<button class="btn back" type="submit">Login</button>
+				
+			</div>
+		</form>
+		</div>	<br>
+		<button class="btn back"><a href="{% url 'register' %}" style="color: black;">Sign Up</a></button>		
+	</div>
+<div>
+	<p align="center" style="color: white;"> {{ error }} </p>
+</div>
+</body>
+</html>

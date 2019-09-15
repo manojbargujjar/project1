@@ -1,0 +1,30 @@
+{% extends 'hostel/base.html' %}
+{% block body %}
+<div class="container">
+	<div  style="margin: 10px;" >
+	<table class="table ">
+		<thead>
+			<tr>
+				<th>Name</th>	
+				<th>Room No.</th>
+				<th>Complaint</th>
+				<th>Date</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+		{% if data %} 
+		{% for i in data %}
+			<tr>
+				<td> {{ i.usr }}</td>
+				<td>{{ i.room_no }}</td>
+				<td> {{ i.Complain }}</td>
+				<td> {{ i.date }}</td>
+			</tr>
+		{% endfor %}	
+		{% endif %}		
+		</tbody>				
+	</table>
+	</div>
+</div>
+{% endblock %}

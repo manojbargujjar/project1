@@ -1,0 +1,66 @@
+{% extends 'hostel/base.html' %}
+
+{% block body %}
+
+
+<body>
+	<div class="container">
+		
+
+	<form method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		<div class="col-md-4">
+			<label for="username">Username</label>
+			<input type="text" name="user" class="form-control" placeholder="enter username" required />	
+		</div>
+		<div class="col-md-4">
+			<label for="first">First</label>
+			<input type="text" name="first" class="form-control" placeholder=" first name" required />
+		</div>
+		<div class="col-md-4">
+			<label for="last">Last</label>
+			<input type="text" name="last" class="form-control" placeholder="last name" required />
+		</div>
+		<div class="col-md-4">
+			<label for="email">Email</label>
+			<input type="text" name="email" class="form-control" placeholder="email@gmail.com" required />
+		</div>
+		<div class="col-md-4">
+			<label for="phone">Phone</label>
+			<input type="text" name="phone" class="form-control" placeholder=" mobile no." required />
+		</div>
+		<div class="col-md-4">
+			<label for="fee-slip">USN</label>
+			<input type="text" name="fee-slip" class="form-control" placeholder=" fee-slip-no." required />
+		</div>
+		<div class="col-md-4">
+			<label for="rank">Rank</label>
+			<input type="text" name="rank" class="form-control" placeholder="enter rank" required />
+		</div>
+		<div class="col-md-4">
+			<label for="gender">Gender</label>
+			<select name="gender" class="form-control" required >
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+			</select>
+		</div>
+		<div class="col-md-4">
+			<label for="clas">Class</label>
+			<input type="text" name="clas" class="form-control" placeholder="enter class" required />
+		</div>
+
+		<div class="col-md-4">
+			<label for="password">Password</label>
+			<input type="password" name="password" class="form-control" placeholder="enter Password" required />
+		</div>
+		<div class="col-md-4">
+			<label for="img">Image</label>
+			<input type="file" name="imgs" class="form-control" required />
+		</div><br><br>
+		<div align="center" style="margin: 220px;"> 
+			<button class="btn back" type="submit">Sign Up</button>	
+		</div>
+		</div>	
+	</form>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'hostel/base.html' %}
+{% block body %}
+<div class="container">
+	<form method="post">
+		{% csrf_token %}
+		<div class="col-md-3">
+			<label for="search">Enter Room Number</label>
+			<input type="search" name="r_no" class="form-control" placeholder="Room no."><br>
+			
+			<button type="submit" class="back form-control " >Find</button>
+		</div>
+	</form>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Hostel Name</th>
+					<th>Room no</th>
+				
+					<th>Bed no</th>
+				
+				</tr>
+			</thead>
+			<tbody>
+				{% if result %} 
+					{% for i in result %}
+
+				<tr>
+					<td>{{ i.usr}}</td>
+					<td>{{ i.hname}}</td>
+					<td>{{ i.room_no}}</td>
+				
+					<td>{{ i.bed_no}}</td>
+				
+				</tr>
+					{% endfor %}
+				{% endif %}
+			</tbody>
+			
+		</table>
+		
+
+	
+</div>
+
+{% endblock %}
+
+						
+			
+			
+			
+			
+			
+	

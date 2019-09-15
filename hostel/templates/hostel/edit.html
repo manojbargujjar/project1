@@ -1,0 +1,42 @@
+{% extends 'hostel/base.html' %}
+
+{% block body %}
+<div class="container">
+	<form method="post">
+		{% csrf_token %}
+		{% if data %}
+			{% for i in data %}
+		<div>
+			<label>user</label>
+			<input type="{{i.usr}}" name="user">
+		</div>
+		<div>
+			<label>Hname</label>
+			<input type="{{i.hname}}" name="hname">
+		</div>
+		<div>
+			<label>Room no.</label>
+			<input type="{{i.room_no}}" name="room">
+		</div>
+		<div>
+			<label>Block</label>
+			<input type="{{i.block}}" name="block">
+		</div>
+		<div>
+			<label>Floor</label>
+			<input type="{{i.floor}}" name="floor">
+		</div>
+		<div>
+			<label>Bed_no.</label>
+			<input type="{{i.bed_no}}" name="bed">
+		</div>
+		<div>
+			<label>Fees</label>
+			<input type="{{i.fees}}" name="fees">
+		</div>
+			{% endfor %}
+		{% endif %}
+	</form>
+	
+</div>
+{% endblock %}

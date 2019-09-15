@@ -1,0 +1,48 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="{% static 'css/bg.css'%}">
+ <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}"> -->
+
+<style type="text/css">
+	
+	.back{
+		background-color: lightgreen;
+	}
+
+</style>
+
+
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="well back">
+			<h1 align="center" style="color: black;">Hostel Allotment</h1>	
+		</div>
+
+		<nav class="navbar navbar-default back">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="{% url 'student' %}"><img src="{% static 'hostel/images/logo.png' %}" class="img-circle" width="30" height="30"></a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">					
+					<li><a href="{% url 'status' %}">Status</a></li>
+					<li><a href="{% url 'contact' %}">Contact</a></li>
+					<li><a href="{% url 'gallery' %}">Gallery</a></li>
+					<li><a href="{% url 'seats' %}">Seats</a></li>
+					<li><a href="{% url 'complain' %}">Complaint</a></li>
+					<li><a href="{% url 'logout' %}" style="color: blue;">Logout</a></li>
+				</ul>				
+			</div>			
+		</nav>
+	</div>
+{% block body %}
+{% endblock %}
+</body>
+</html>

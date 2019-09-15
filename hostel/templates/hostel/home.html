@@ -1,0 +1,11 @@
+{% extends 'hostel/base.html' %}
+{% load static from staticfiles %}
+{% block body %}
+<div class=" container">
+
+<div>
+	<marquee direction="right" behavior="alternate"><img src="{% static 'hostel/images/hostel2.jpg' %}" width="250" height="200"> </marquee>
+	
+	<marquee behavior="alternate"><img src="{% static 'hostel/images/hostel1.jpg' %}" width="250" height="200"> </marquee>
+</div>
+{% endblock %}
